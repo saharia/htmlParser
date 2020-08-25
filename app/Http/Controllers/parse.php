@@ -12,6 +12,7 @@ class ParseController extends Controller
     //
     public function parse(Request $request)
     {
+    	ini_set('max_execution_time', 0);
     	$dom = new Dom;
 			$dom->loadFromUrl('http://www.mycorporateinfo.com');
 			$data = $dom->find('.list-group');
